@@ -6,8 +6,10 @@ const detailRouter = express.Router();
 
 // Tạo route CRUD
 detailRouter.get('/check-save/:id', protect, detailController.save);
-detailRouter.get('/:id', detailController.detailImage);
 detailRouter.get('/comment/:id', protect, detailController.commentImage);
+detailRouter.post('/comment/:id', protect, detailController.comment);
+detailRouter.get('/:id', detailController.detailImage);
+
 
 
 export default detailRouter;

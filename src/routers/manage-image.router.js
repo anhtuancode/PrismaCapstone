@@ -10,6 +10,6 @@ manageImageRouter.get('/list-create', protect, manageImageController.listCreate)
 manageImageRouter.get('/list-save', protect, manageImageController.listSave);
 manageImageRouter.delete('/:id', protect, manageImageController.delete);
 
-
+    
 
 export default manageImageRouter;

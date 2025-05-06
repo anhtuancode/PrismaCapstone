@@ -75,4 +75,30 @@ export const detailService = {
 
         return record;
     },
+    comment: async function (req) {
+        const userId = req.user.id;
+        const imageId = Number(req.params.id);
+        const {noi_dung} = req.body;
+
+        const isImage = await prisma.hinh_anh.findUnique({
+            where:{
+                id: imageId
+            }
+        })
+
+        if(!isImage) throw new BadRequestException("Image not found");
+
+        const record = await prisma.binh_luan.create({
+            data:{
+                nguoi_dung_id: userId,
+                hinh_id: imageId,
+                noi_dung: noi_dung,
+                ngay_binh_luan: new Date()
+            }
+        })
+
+        if(!record) throw new BadRequestException("Failed to save comment");
+
+        return record;
+    },
 };
