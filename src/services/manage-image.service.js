@@ -84,28 +84,15 @@ export const manageImageService = {
         "User dont have premission to delete this images"
       );
 
-    const commentDeleted = await prisma.binh_luan.deleteMany({
-      where: {
-        hinh_id: imageId,
-      },
-    });
-
-    const saveDeleted = await prisma.luu_anh.deleteMany({
-      where: {
-        hinh_id: imageId,
-      },
-    });
-
-    const imageDeleted = await prisma.hinh_anh.delete({
+    const imageDeleted = await prisma.hinh_anh.update({
       where: {
         id: imageId,
       },
+      data:{
+        isDeleted: true
+      }
     });
 
-    return {
-      commentDeleted: commentDeleted,
-      saveDeleted: saveDeleted,
-      imageDeleted: imageDeleted,
-    };
+    return imageDeleted
   },
 };
