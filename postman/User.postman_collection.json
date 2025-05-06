@@ -1,0 +1,105 @@
+{
+	"info": {
+		"_postman_id": "59688c31-f32f-4428-ba99-f88453926772",
+		"name": "User",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40891259",
+		"_collection_link": "https://anhtuan-3359.postman.co/workspace/CapstonePrisma~29fdeca5-233d-4487-8747-84c7dd802732/collection/40891259-59688c31-f32f-4428-ba99-f88453926772?action=share&source=collection_link&creator=40891259"
+	},
+	"item": [
+		{
+			"name": "Update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{accessToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "mat_khau",
+							"value": "1234678",
+							"type": "text"
+						},
+						{
+							"key": "ho_ten",
+							"value": "Cam Tu ",
+							"type": "text"
+						},
+						{
+							"key": "tuoi",
+							"value": "20",
+							"type": "text"
+						},
+						{
+							"key": "anh_dai_dien",
+							"type": "file",
+							"src": "/C:/Users/TUAN/Downloads/mindxImage.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{domain}}user/update",
+					"host": [
+						"{{domain}}user"
+					],
+					"path": [
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Image",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{accessToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "duong_dan",
+							"type": "file",
+							"src": "/C:/Users/TUAN/Downloads/tree.jpg"
+						},
+						{
+							"key": "mo_ta",
+							"value": "Mô tả hình ảnh cây ",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{domain}}user/upload-images",
+					"host": [
+						"{{domain}}user"
+					],
+					"path": [
+						"upload-images"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

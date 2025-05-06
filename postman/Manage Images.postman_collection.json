@@ -1,0 +1,119 @@
+{
+	"info": {
+		"_postman_id": "feab14d8-3688-4594-bad5-5be04db8a839",
+		"name": "Manage Images",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40891259",
+		"_collection_link": "https://anhtuan-3359.postman.co/workspace/CapstonePrisma~29fdeca5-233d-4487-8747-84c7dd802732/collection/40891259-feab14d8-3688-4594-bad5-5be04db8a839?action=share&source=collection_link&creator=40891259"
+	},
+	"item": [
+		{
+			"name": "List Create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{accessToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}manage-image/list-create",
+					"host": [
+						"{{domain}}manage-image"
+					],
+					"path": [
+						"list-create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Save",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{accessToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}manage-image/list-save",
+					"host": [
+						"{{domain}}manage-image"
+					],
+					"path": [
+						"list-save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{accessToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}manage-image/4",
+					"host": [
+						"{{domain}}manage-image"
+					],
+					"path": [
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Info",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{accessToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}manage-image/getInfo",
+					"host": [
+						"{{domain}}manage-image"
+					],
+					"path": [
+						"getInfo"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
